@@ -9,7 +9,7 @@
 1. HTML/CSSを利用した3ページ以上のホームページを作成
 2. JavaScriptを活用する
 ---------------------------------------------------------------
-参考にした資料
+・参考にした資料
 【RPG編 #01】JavaScriptゲームプログラミング初級
 チャンネル名：T Umezawa
 URL:https://www.youtube.com/watch?v=RKcFIg1yHOI

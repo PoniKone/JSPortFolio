@@ -1,0 +1,223 @@
+@charset "utf-8";
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+html {
+	font-family: 'DotGothic16', sans-serif;
+
+
+		/*総称フォント・・・フォントの大きなカテゴリ
+		sans-serif...ゴシック体,serif...明朝体,system-ui...OSのUIと同じフォント,monospace...等幅フォント,fantasy...装飾系フォント,cursive...筆記体*/
+		/*Google Fonts使うと便利*/
+}
+	html * {
+		box-sizing: border-box;
+}
+body {
+	margin: 0 0 0 0;
+	background-color: #444444;
+
+}
+/*スタートボタン*/
+
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+}
+
+
+a.btn--orange:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: # f56500;
+  border-bottom: 2px solid #b84c00;
+}
+a.btn1{
+	width: 180px;
+}
+a.btn2{
+	width: 405px;
+}
+.wrapper {
+	margin: 0 auto 0 auto;
+	max-width: 960px;
+}
+
+h3.dotted {
+		border-bottom: 8px dotted; #dddddd;/*値は順不同*/
+}
+h2 {
+	color: #dddddd;
+	letter-spacing: 10px;
+	font-size: 24px;
+	border: 8px solid #dddddd;/*値は順不同*/
+	 border-radius: 0.5rem;
+	background-color: #000000;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;/* = margin: 20px 0px 20px 0px; or margin: 20px 0px;*/
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;/* = padding: 5px; ...ショートハンドプロパティ*/
+
+/*サイズ = マージン>ボーダー>パディング>コンテンツ*/
+}
+
+h3 {
+	color: #dddddd;
+	font-size: 22px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;/* = margin: 20px 0px 20px 0px; or margin: 20px 0px;*/
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;/* = padding: 5px; ...ショートハンドプロパティ*/
+}
+
+
+
+
+/*すべてのページに適用 - ヘッダー -*/
+.logo {/*タイトルロゴの配置を中央へ*/
+		margin: 50px 0 40px 0;
+		line-height: 0;
+		text-align: center;
+}
+
+.nav{
+	text-align: center;
+}
+.nav li { /*ナビゲーションのリスト項目*/
+		
+		font-size: 22px;
+		letter-spacing: 10px;
+		display: inline;
+		list-style-type: none;
+		padding-right: 40px;
+
+
+}
+
+
+/*すべてのページに適用 - フッター - */
+.footer {
+		background-image: url(../images/SLIME.png);
+		background-repeat: repeat-x;
+		margin-top: 30px;
+		padding: 80px 15px 20px 15px;
+		font-size: 12px;
+		color: #dddddd;
+}
+
+/*個別のスタイル*/
+/*index.html*/
+.slide {
+		margin: 15px 0 0 0;
+		text-align: center;
+}
+
+/*スライドショー作成*/
+ /*=== 画像の表示エリア ================================= */
+.slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 800px;
+  height     : 800px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #444;
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    : 0;
+  animation  : slideAnime 30s ease infinite;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 10s }
+.slide img:nth-of-type(3) { animation-delay: 20s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0; transform: scale(.1, .1)}
+   16% { opacity: 1; transform: scale(1, 1)  }
+  17% { opacity: 1; transform: scale(1, 1)  }
+  33% { opacity: 0; transform: scale(2, 2)  }
+ 100% { opacity: 0; transform: scale(2, 2)  }
+}
+
+
+/*スマートフォン向けCSS*/
+@media (max-width: 767px) {
+/*	全体ナビゲーション*/
+	.wrapper {
+		margin: 0 8px;
+	}
+	.logo {
+		margin: 30px 0;
+	}
+	.logo img {
+		width: 200px;
+	}
+	.nav li {
+		display: block;
+	}
+/*	menu.html - 横並び解除*/
+	.menu-item {
+		display: block;
+	}
+	.menu-photo {
+		margin-right: 0;
+		width: 100%;
+	}
+	.menu-text {
+		width: 100%;
+	}
+
